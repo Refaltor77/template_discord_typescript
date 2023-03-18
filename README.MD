@@ -13,12 +13,22 @@ Démarrer le bot: `npm start`
 
 ## Configuration
 
-Le fichier `config.json` dans le dossier `resources` doit être rempli avec les informations de votre bot. Voici un exemple de configuration:
-````json
-{
-  "token": "AezrtdygjhdgsTRUYIHGFDSFFB.uft_yuoijibhuyGYUOI6R7T8YUOI.jibeuifjeiufoijIUB9UJION",
-  "client_id": "7858725822822"
-}
+Le fichier `.env` dans le dossier racine doit être rempli avec les informations de votre bot. Voici un exemple de configuration:
+````ENV
+# USER
+TOKEN=
+CLIENT_ID=
+
+
+
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+DATABASE_URL="postgresql://postgres:postgres@127.0.0.1:5432/test?schema=public"
 ````
 
 ## Utilisation
