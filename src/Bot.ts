@@ -3,8 +3,11 @@ import registerEvents from "./handlers/Events"
 import registerCommands from "./handlers/Commands";
 import SQL from "./sql/SQL";
 import dotenv from "dotenv";
+import cache from "./cache/CacheSystem";
 
 dotenv.config();
+
+
 
 // use only if you use SQL
 
