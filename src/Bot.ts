@@ -2,7 +2,9 @@ import { Client, GatewayIntentBits } from "discord.js";
 import registerEvents from "./handlers/Events"
 import registerCommands from "./handlers/Commands";
 import SQL from "./sql/SQL";
-const config = require("../resources/config.json");
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // use only if you use SQL
 
@@ -42,4 +44,4 @@ registerEvents(client);
 registerCommands(client);
 
 
-client.login(config.token);
+client.login(process.env.TOKEN);

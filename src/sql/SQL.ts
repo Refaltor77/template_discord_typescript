@@ -1,20 +1,18 @@
-import mysql, {Connection} from "mysql";
+import {PrismaClient} from '@prisma/client';
 
 export default class SQL {
-    connection(): Connection {
-       return mysql.createConnection({
-           host: 'localhost',
-           user: 'root',
-           password: '',
-           database: 'crypto-bot'
-       });
+    connection(): PrismaClient {
+        return new PrismaClient();
     }
 
-    generateTables(): void {
-        let db = this.connection();
 
-        // create tables
-
-        db.end();
+    async  createGuild(guild_id: string, name: string) {
+        let prisma = this.connection();
+        return await prisma.guild.create({
+            data: {
+                guild_id,
+                name,
+            },
+        });
     }
 }

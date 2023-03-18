@@ -10,9 +10,12 @@
   "author": "refaltor",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^4.11.0",
     "axios": "^1.3.4",
     "discord.js": "^14.8.0",
-    "mysql": "^2.18.1"
+    "dotenv": "^16.0.3",
+    "mysql": "^2.18.1",
+    "prisma": "^4.11.0"
   },
   "devDependencies": {
     "@types/mysql": "^2.15.21",
